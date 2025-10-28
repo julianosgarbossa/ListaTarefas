@@ -6,6 +6,11 @@
 
 import Foundation
 
+// variáveis para armazenar os dados
+var listaTarefas: [String] = []
+var tarefasConcluidas: [Bool] = []
+var programaAtivo = true
+
 // função para exibir o menu do programa
 func exibirMenu() {
     print("\n---- LISTA DE TAREFAS ----")
@@ -67,11 +72,6 @@ func marcarDesmarcarTarefa(concluidas: [Bool], indice: Int) -> [Bool]? {
     concluidasAtualizadas[indice] = !concluidasAtualizadas[indice]
     return concluidasAtualizadas
 }
-
-// variáveis para armazenar os dados
-var listaTarefas: [String] = []
-var tarefasConcluidas: [Bool] = []
-var programaAtivo = true
 
 // start do programa
 while programaAtivo {
@@ -168,7 +168,6 @@ while programaAtivo {
                 print("O número informado é inválido, tente novamente!")
             }
         }
-    
         
     case 6:
         // sair do programa
